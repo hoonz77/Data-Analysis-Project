@@ -1,0 +1,93 @@
+FINAL PROJECT
+RETAIL SALES PERFORMANCE ANALYSIS
+
+SCENARIO
+You are a Junior Data Analyst at a Malaysian retail company. Management gives you one raw Excel file: sales_raw_final_project.xlsx. Your job is to clean the data, analyse the sales performance, insert the cleaned data into MySQL, and present business findings.
+
+==================================================
+TASK 1 - UNDERSTAND THE DATA
+==================================================
+1. Read the Excel file.
+2. Display the first 5 rows.
+
+==================================================
+TASK 2 - CLEAN THE DATA
+==================================================
+Use the data cleaning methods learned in class.
+A. Duplicate Data
+- Check duplicated records.
+- Display duplicated records.
+- Remove duplicated records.
+
+B. Data Type Conversion
+Convert:
+- Age to numeric
+- Quantity to integer
+- Unit_Price to float
+- List_Price to float
+- Cost_Price to float
+- Discount_Pct to float
+- Order_Date to datetime
+Use errors='coerce' where appropriate.
+
+C. Missing Values
+- Fill missing Age using the mean Age.
+- Fill missing Membership with "Regular".
+- Fill missing Discount_Pct with 0.
+- Drop records with missing:
+  - Order_Date
+  - Quantity
+  - Customer_Name
+  - Product_Name
+
+D. Data Filtering
+- Keep only records where Quantity is greater than 0.
+
+E. Sort and Reset Index
+- Sort the cleaned data by Order_Date.
+- Reset the index number.
+
+==================================================
+TASK 3 - CREATE NEW COLUMNS
+==================================================
+Create:
+Gross_Amount = Quantity × Unit_Price
+Revenue = Gross_Amount × (1 - Discount_Pct)
+Cost = Quantity × Cost_Price
+Profit = Revenue - Cost
+Order_Month = Month from Order_Date
+
+==================================================
+TASK 4 - EXPORT CLEANED DATA
+==================================================
+Export the cleaned data as:
+cleaned_sales.xlsx
+
+==================================================
+TASK 5 - BUSINESS ANALYSIS
+==================================================
+For business analysis, use only: Status == "Completed" dataset to answer:
+Q1. What are the total completed orders, total revenue, and total profit?
+Q2. Which state generates the highest revenue?
+Q3. Which category generates the highest profit?
+Q4. What are the Top 5 products by revenue?
+Q5. Which membership type has the highest average spending per customer?
+Q6. Which month has the highest revenue?
+Q7. Which sales channel generates the highest revenue?
+
+==================================================
+TASK 6 - VISUALIZATION
+==================================================
+Create at least 3 charts:
+1. Revenue by State
+2. Profit by Category
+3. Monthly Revenue Trend
+
+
+==================================================
+TASK 7 - MYSQL
+==================================================
+1. Create a database.
+2. Create a sales_analysis table.
+3. Insert the cleaned data into MySQL.
+4. Use SQL to answer at least 2 analysis questions.
